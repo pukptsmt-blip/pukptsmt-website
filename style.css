@@ -18,44 +18,45 @@ body {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #002b5c, #0054a6);
-  padding: 10px 20px;
+  padding: 12px 20px;
   color: white;
-  gap: 10px;
+  gap: 15px;
+  flex-wrap: nowrap;
 }
 
-/* LOGO RESPONSIVE */
+/* LOGO AUTO RESPONSIVE */
 .logo {
-  width: clamp(60px, 6vw, 120px);
-  height: clamp(60px, 6vw, 120px);
+  width: 80px;         /* desktop default */
+  height: 80px;
   object-fit: contain;
   background: white;
-  padding: 6px;
+  padding: 5px;
   border-radius: 10px;
 }
 
-/* TITLE HEADER */
+/* TITLE CENTER */
 .title {
   flex: 1;
   text-align: center;
 }
 
 .title h1 {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: 22px;
   font-weight: bold;
 }
 
 .title p {
-  font-size: clamp(11px, 1.2vw, 14px);
+  font-size: 13px;
   opacity: 0.85;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
   background: #111;
-  padding: 10px 20px;
+  padding: 8px 20px;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .navbar-container {
@@ -92,9 +93,10 @@ body {
 /* HAMBURGER BUTTON */
 .menu-toggle {
   display: none;
-  font-size: 26px;
+  font-size: 28px;
   color: white;
   cursor: pointer;
+  z-index: 3000;
 }
 
 /* ================= CONTENT ================= */
@@ -104,14 +106,14 @@ section {
   padding: 15px;
 }
 
-/* ================= CARD ================= */
+/* CARD BOX */
 .card {
   background: white;
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   margin-bottom: 15px;
-  transition: 0.2s ease;
+  transition: 0.2s;
 }
 
 .card:hover {
@@ -119,17 +121,16 @@ section {
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-/* ================= KEGIATAN BOX ================= */
+/* KEGIATAN ITEM */
 .kegiatan-item {
   background: #f9f9f9;
-  padding: 10px 12px;
+  padding: 12px;
   border-left: 4px solid #0054a6;
   border-radius: 6px;
   margin-bottom: 10px;
-  font-size: 14px;
 }
 
-/* ================= TABLE PENGURUS ================= */
+/* TABLE PENGURUS */
 .pengurus-table {
   width: 100%;
   border-collapse: collapse;
@@ -148,7 +149,7 @@ section {
   color: white;
 }
 
-/* ================= FORM ================= */
+/* FORM INPUT */
 input,
 textarea {
   width: 100%;
@@ -157,7 +158,6 @@ textarea {
   border: 1px solid #ccc;
   font-size: 14px;
   margin-bottom: 10px;
-  transition: 0.2s;
 }
 
 input:focus,
@@ -181,16 +181,15 @@ button {
 
 button:hover {
   background: #003d7a;
-  transform: scale(1.02);
 }
 
-/* ================= FOTO SECTION (BUKAN LOGO) ================= */
+/* IMAGE CONTENT (BUKAN LOGO) */
 section img:not(.logo) {
   width: 100%;
   max-width: 450px;
-  border-radius: 10px;
   display: block;
   margin: 10px auto;
+  border-radius: 10px;
 }
 
 /* ================= FOOTER ================= */
@@ -203,38 +202,55 @@ footer {
   margin-top: 40px;
 }
 
-/* ================= RESPONSIVE MOBILE ================= */
+/* ================= RESPONSIVE MODE ================= */
+
+/* TABLET & HP */
 @media (max-width: 768px) {
+
+  /* HEADER */
   .header {
-    flex-direction: column;
-    padding: 8px 10px;
-    text-align: center;
+    flex-direction: row;
   }
 
-  .title {
-    margin-top: 6px;
+  .logo {
+    width: 55px;   /* HP logo kecil tapi jelas */
+    height: 55px;
   }
 
-  /* SHOW HAMBURGER */
+  .title h1 {
+    font-size: 16px;
+  }
+
+  .title p {
+    font-size: 11px;
+  }
+
+  /* HAMBURGER SHOW */
   .menu-toggle {
     display: block;
   }
 
   /* MOBILE MENU */
   .nav-menu {
-    flex-direction: column;
-    background: #111;
     position: absolute;
     top: 55px;
     left: 0;
     width: 100%;
+    background: #111;
+    flex-direction: column;
     display: none;
-    padding: 10px 0;
+    z-index: 2500;
   }
 
   .nav-menu li {
+    border-bottom: 1px solid #222;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
+  }
+
+  .nav-menu li a {
+    font-size: 16px;
+    display: block;
   }
 
   .nav-menu.show {
@@ -242,7 +258,7 @@ footer {
   }
 }
 
-/* EXTRA SMALL PHONE */
+/* HP KECIL */
 @media (max-width: 480px) {
   section {
     padding: 10px;
@@ -254,12 +270,5 @@ footer {
 
   button {
     width: 100%;
-  }
-}
-
-/* ================= DESKTOP ENHANCEMENT ================= */
-@media (min-width: 1024px) {
-  .header {
-    padding: 15px 40px;
   }
 }
