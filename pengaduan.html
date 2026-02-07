@@ -8,42 +8,40 @@
 
 <header class="header">
   <img src="fspmi.png" class="logo-left">
+
   <div class="title">
     <h1>PUK PT SMT Indonesia</h1>
-    <p>Form Pengaduan Anggota</p>
+    <p>Serikat Pekerja Elektronik & Elektrikal</p>
   </div>
+
   <img src="spee.png" class="logo-right">
 </header>
 
 <nav>
   <a href="index.html">Beranda</a>
-  <a href="tentang.html">Tentang PUK</a>
-  <a href="pengaduan.html">Pengaduan Anggota</a>
+  <a href="tentang.html">Profil PUK</a>
+  <a href="pengurus.html">Pengurus</a>
+  <a href="berita.html">Kegiatan</a>
+  <a href="pengaduan.html">Pengaduan</a>
 </nav>
 
+
 <section>
-  <h2>Form Pengaduan Anggota</h2>
+<div class="card">
+<h2>Form Pengaduan Anggota</h2>
 
-  <form action="https://formspree.io/f/mreaglya" method="POST">
-    Nama Anggota:<br>
-    <input type="text" name="nama" required><br><br>
+<form action="https://formspree.io/f/mreaglya" method="POST">
+<input type="text" name="nama" placeholder="Nama Anggota" required><br><br>
+<input type="text" name="hp" placeholder="Nomor HP" required><br><br>
+<input type="text" name="bagian" placeholder="Departemen / Bagian"><br><br>
+<textarea name="pengaduan" rows="5" placeholder="Isi Pengaduan" required></textarea><br><br>
+<button type="submit">Kirim Pengaduan</button>
+</form>
 
-    Nomor HP:<br>
-    <input type="text" name="hp" required><br><br>
-
-    Departemen / Bagian:<br>
-    <input type="text" name="departemen"><br><br>
-
-    Isi Pengaduan:<br>
-    <textarea name="pengaduan" rows="5" required></textarea><br><br>
-
-    <button type="submit">Kirim Pengaduan</button>
-  </form>
+</div>
 </section>
 
-<footer>
-  © 2026 Bidang 3 PUK PT SMT Indonesia
-</footer>
+<footer>© 2026 PUK PT SMT Indonesia</footer>
 
 </body>
 </html>
