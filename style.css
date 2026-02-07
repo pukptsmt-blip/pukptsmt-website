@@ -1,25 +1,21 @@
-/* RESET DASAR */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f3f6fb;
+  background: #f4f6f9;
 }
 
-/* HEADER LOGO + JUDUL */
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #0a4fa3, #003366);
-  padding: 15px 40px;
+  background: #0a3d91;
+  padding: 15px 30px;
   color: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.logo-left,
-.logo-right {
-  width: 140px;
-  height: auto;
+.logo-left, .logo-right {
+  width: 240px;
 }
 
 .title {
@@ -27,90 +23,66 @@ body {
   flex-grow: 1;
 }
 
-.title h1 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.title p {
-  margin: 3px 0 0;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-/* MENU NAVIGASI */
+/* MENU */
 nav {
-  background: #111;
-  padding: 12px;
+  background: #1c1c1c;
+  padding: 10px;
   text-align: center;
 }
 
 nav a {
   color: white;
-  margin: 0 15px;
+  margin: 10px 15px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
 }
 
 nav a:hover {
-  color: #ffcc00;
+  color: #ffd700;
 }
 
-/* SECTION ISI */
+/* CONTENT */
 section {
-  padding: 25px 50px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
   background: white;
-  margin: 20px auto;
-  max-width: 900px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
-section h2 {
-  color: #003366;
-  border-bottom: 3px solid #004aad;
-  padding-bottom: 5px;
-}
-
-/* FORM MODERN */
+/* FORM */
 input, textarea {
   width: 100%;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  margin-top: 5px;
-  font-size: 14px;
 }
 
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #004aad;
-  box-shadow: 0 0 5px #004aad;
-}
-
-/* TOMBOL */
 button {
-  background: #004aad;
+  padding: 12px 20px;
+  background: #0a3d91;
   color: white;
-  padding: 12px 25px;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 15px;
 }
 
 button:hover {
-  background: #003366;
+  background: #062c6b;
 }
 
 /* FOOTER */
 footer {
-  background: #111;
+  background: #0a3d91;
   color: white;
   text-align: center;
-  padding: 15px;
-  font-size: 13px;
+  padding: 10px;
+  margin-top: 40px;
 }
