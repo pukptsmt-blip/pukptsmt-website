@@ -1,127 +1,120 @@
+/* ===== GLOBAL ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f4f6f9;
+  color: #222;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #0a3d91;
-  padding: 15px 30px;
+  justify-content: center;
+  gap: 30px;
+  background: linear-gradient(90deg, #002b5c, #0054a6);
+  padding: 15px 20px;
   color: white;
 }
 
 .logo-left, .logo-right {
-  width: 240px;
+  width: 100px;
+  height: auto;
 }
 
 .title {
   text-align: center;
-  flex-grow: 1;
 }
 
-/* MENU */
+.title h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.title p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== MENU NAVBAR ===== */
 nav {
-  background: #1c1c1c;
+  background: #111;
   padding: 10px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 nav a {
   color: white;
-  margin: 10px 15px;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 14px;
 }
 
 nav a:hover {
   color: #ffd700;
 }
 
-/* CONTENT */
+/* ===== CONTENT SECTION ===== */
 section {
-  padding: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.card {
   background: white;
+  max-width: 900px;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
 }
 
-/* FORM */
+/* ===== CARD BOX ===== */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+/* ===== FORM ===== */
 input, textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
+input:focus, textarea:focus {
+  border-color: #0054a6;
+  outline: none;
+}
+
+/* BUTTON */
 button {
   padding: 12px 20px;
-  background: #0a3d91;
+  background: #0054a6;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 14px;
 }
 
 button:hover {
-  background: #062c6b;
+  background: #003d7a;
 }
 
-/* FOOTER */
-footer {
-  background: #0a3d91;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f6f9;
-}
-
-nav {
-  background: #111;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: yellow;
-}
-
-section {
-  background: white;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 900px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
+/* ===== FOOTER ===== */
 footer {
   background: #002b5c;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
+  margin-top: 40px;
+  font-size: 13px;
 }
-
