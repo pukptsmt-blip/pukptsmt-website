@@ -7,12 +7,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
-
 
   
 <body>
@@ -42,6 +36,17 @@ function toggleMenu() {
   </div>
 </div>
 
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-menu");
+
+toggle.onclick = () => {
+  menu.classList.toggle("show");
+};
+</script>
+
+</body>
+</html>
 
 
 
