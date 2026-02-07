@@ -1,19 +1,26 @@
-/* ===== GLOBAL ===== */
-body {
-  font-family: Arial, sans-serif;
+/* ===== RESET & GLOBAL ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
   background: #f4f6f9;
   color: #222;
+  line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 15px;
   background: linear-gradient(90deg, #002b5c, #0054a6);
   padding: 12px 20px;
   color: white;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -22,19 +29,18 @@ body {
 }
 
 .title {
-  text-align: center;
   flex: 1;
+  text-align: center;
 }
 
 .title h1 {
-  margin: 0;
   font-size: 22px;
+  font-weight: bold;
 }
 
 .title p {
-  margin: 0;
   font-size: 13px;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* ===== NAVBAR ===== */
@@ -44,15 +50,16 @@ nav {
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 12px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
+  transition: 0.2s ease;
 }
 
 nav a:hover,
@@ -64,58 +71,71 @@ nav a.active {
 section {
   max-width: 900px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 15px;
 }
 
-/* CARD BOX */
+/* ===== CARD ===== */
 .card {
-  background: white;
+  background: #fff;
   padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 15px;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 /* ===== FORM ===== */
-input, textarea {
+input,
+textarea {
   width: 100%;
-  padding: 10px;
+  padding: 10px 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
   margin-bottom: 10px;
+  transition: 0.2s ease;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #0054a6;
   outline: none;
+  box-shadow: 0 0 0 2px rgba(0,84,166,0.1);
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 button {
-  padding: 12px 20px;
+  padding: 10px 18px;
   background: #0054a6;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  transition: 0.2s ease;
 }
 
 button:hover {
   background: #003d7a;
+  transform: scale(1.02);
 }
 
-/* KEGIATAN BOX */
+/* ===== KEGIATAN BOX ===== */
 .kegiatan-item {
-  background: #f4f4f4;
-  padding: 10px;
-  border-left: 5px solid #0054a6;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-left: 4px solid #0054a6;
   border-radius: 6px;
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
   background: #002b5c;
   color: white;
@@ -125,19 +145,38 @@ footer {
   margin-top: 40px;
 }
 
-/* RESPONSIVE HP */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .logo {
-    width: 60px;
+    width: 70px;
   }
 
   .title h1 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   nav a {
     display: inline-block;
-    margin: 5px;
-    font-size: 12px;
+    margin: 6px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  button {
+    width: 100%;
   }
 }
