@@ -9,9 +9,10 @@
 
 <script>
 function toggleMenu() {
-  document.querySelector(".nav-menu").classList.toggle("show");
+  document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
+
 
   
 <body>
@@ -31,7 +32,7 @@ function toggleMenu() {
   <div class="navbar-container">
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-menu">
+    <ul class="nav-menu" id="navMenu">
       <li><a href="index.html">Beranda</a></li>
       <li><a href="tentang.html">Profil PUK</a></li>
       <li><a href="pengurus.html">Pengurus</a></li>
@@ -40,6 +41,7 @@ function toggleMenu() {
     </ul>
   </div>
 </div>
+
 
 
 
