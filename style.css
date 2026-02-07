@@ -109,6 +109,26 @@ button:hover {
   background: #003d7a;
 }
 
+/* TABEL PENGURUS */
+.pengurus-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.pengurus-table th, 
+.pengurus-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.pengurus-table th {
+  background: #0a3d91;
+  color: white;
+}
+
+
 /* ===== FOOTER ===== */
 footer {
   background: #002b5c;
