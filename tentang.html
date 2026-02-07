@@ -7,6 +7,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-menu").classList.toggle("show");
+}
+</script>
+
+  
 <body>
 
 <header class="header">
@@ -21,13 +28,21 @@
 </header>
 
 <!-- MENU -->
-<nav>
-  <a href="index.html">Beranda</a>
-  <a href="tentang.html">Profil PUK</a>
-  <a href="pengurus.html">Pengurus</a>
-  <a href="berita.html">Kegiatan</a>
-  <a href="pengaduan.html">Pengaduan</a>
-</nav>
+<div class="navbar">
+  <div class="navbar-container">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Profil PUK</a></li>
+      <li><a href="pengurus.html">Pengurus</a></li>
+      <li><a href="berita.html">Kegiatan</a></li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 <!-- CONTENT -->
 <section>
@@ -60,5 +75,12 @@
   © 2026 PUK PT SMT Indonesia - Bidang 3
 </footer>
 
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
+
+  
 </body>
 </html>
