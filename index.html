@@ -10,14 +10,40 @@
     section {padding: 20px;}
     footer {background: #004aad; color: white; text-align: center; padding: 10px;}
     button {padding: 10px 15px; background: #004aad; color: white; border: none;}
+
+    .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0a3d91;
+  padding: 15px;
+  color: white;
+}
+
+.logo-left, .logo-right {
+  width: 80px;
+}
+
+.title {
+  text-align: center;
+  flex-grow: 1;
+}
+
   </style>
 </head>
 <body>
 
-<header>
-  <h1>PUK PT SMT Indonesia</h1>
-  <p>Website Resmi Serikat Pekerja</p>
+<header class="header">
+  <img src="png-transparent-logo-federasi-serikat-pekerja.png" class="logo-left">
+
+  <div class="title">
+    <h1>PUK PT SMT Indonesia</h1>
+    <p>Website Resmi Serikat Pekerja</p>
+  </div>
+
+  <img src="spee (1).png" class="logo-right">
 </header>
+
 
 <nav>
   <a href="#">Beranda</a>
