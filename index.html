@@ -31,10 +31,27 @@
 </section>
 
 <section id="pengaduan">
-  <h2>Form Pengaduan Anggota</h2>
-  <p>Klik tombol di bawah untuk mengisi pengaduan.</p>
-  <button onclick="window.open('https://forms.gle/ISI_LINK_GOOGLE_FORM')">Kirim Pengaduan</button>
+  <h2>Form Pengaduan Anggota PUK PT SMT Indonesia</h2>
+
+  <form action="https://formspree.io/f/xzdabvap" method="POST">
+
+    Nama Anggota:<br>
+    <input type="text" name="nama" required><br><br>
+
+    Nomor HP:<br>
+    <input type="text" name="hp" required><br><br>
+
+    Departemen / Bagian:<br>
+    <input type="text" name="departemen"><br><br>
+
+    Isi Pengaduan:<br>
+    <textarea name="pengaduan" rows="5" required></textarea><br><br>
+
+    <button type="submit">Kirim Pengaduan</button>
+  </form>
+
 </section>
+
 
 <footer>
   <p>© 2026 PUK PT SMT Indonesia</p>
