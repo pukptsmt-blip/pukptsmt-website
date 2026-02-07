@@ -7,6 +7,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-menu").classList.toggle("show");
+}
+</script>
+
+  
 <body>
 
 <header class="header">
@@ -20,14 +27,21 @@
   <img src="spee.png" class="logo" alt="Logo SPEE">
 </header>
 
+<div class="navbar">
+  <div class="navbar-container">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<nav>
-  <a href="index.html">Beranda</a>
-  <a href="tentang.html">Profil PUK</a>
-  <a href="pengurus.html">Pengurus</a>
-  <a href="berita.html" class="active">Kegiatan</a>
-  <a href="pengaduan.html">Pengaduan</a>
-</nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Profil PUK</a></li>
+      <li><a href="pengurus.html">Pengurus</a></li>
+      <li><a href="berita.html">Kegiatan</a></li>
+      <li><a href="pengaduan.html">Pengaduan</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 <section class="content">
   <div class="card">
@@ -55,5 +69,12 @@
   © 2026 PUK PT SMT Indonesia - Bidang 3
 </footer>
 
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
+
+  
 </body>
 </html>
