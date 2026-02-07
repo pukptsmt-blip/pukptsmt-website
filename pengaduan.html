@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Pengaduan Anggota</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pengaduan Anggota PUK</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <img src="fspmi.png" class="logo">
+  <img src="fspmi.png" class="logo-left" alt="Logo FSPMI">
 
   <div class="title">
     <h1>PUK PT SMT Indonesia</h1>
     <p>Serikat Pekerja Elektronik Elektrik</p>
   </div>
 
-  <img src="spee.png" class="logo">
+  <img src="spee.png" class="logo-right" alt="Logo SPEE">
 </header>
 
-
+<!-- MENU -->
 <nav>
   <a href="index.html">Beranda</a>
   <a href="tentang.html">Profil PUK</a>
@@ -26,23 +30,36 @@
   <a href="pengaduan.html">Pengaduan</a>
 </nav>
 
-
+<!-- CONTENT -->
 <section>
-<div class="card">
-<h2>Form Pengaduan Anggota</h2>
+  <div class="card">
+    <h2>Form Pengaduan Anggota PUK PT SMT Indonesia</h2>
+    <p>Silakan isi form di bawah ini untuk menyampaikan pengaduan atau aspirasi anggota.</p>
 
-<form action="https://formspree.io/f/mreaglya" method="POST">
-<input type="text" name="nama" placeholder="Nama Anggota" required><br><br>
-<input type="text" name="hp" placeholder="Nomor HP" required><br><br>
-<input type="text" name="bagian" placeholder="Departemen / Bagian"><br><br>
-<textarea name="pengaduan" rows="5" placeholder="Isi Pengaduan" required></textarea><br><br>
-<button type="submit">Kirim Pengaduan</button>
-</form>
+    <form action="https://formspree.io/f/mreaglya" method="POST">
 
-</div>
+      <label>Nama Anggota</label>
+      <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+
+      <label>Nomor HP / WhatsApp</label>
+      <input type="text" name="hp" placeholder="08xxxxxxxxxx" required>
+
+      <label>Departemen / Bagian</label>
+      <input type="text" name="bagian" placeholder="Produksi / QA / Engineering">
+
+      <label>Isi Pengaduan</label>
+      <textarea name="pengaduan" rows="5" placeholder="Tuliskan pengaduan atau aspirasi Anda..." required></textarea>
+
+      <button type="submit">📩 Kirim Pengaduan</button>
+    </form>
+
+  </div>
 </section>
 
-<footer>© 2026 Bidang 3 PUK PT SMT Indonesia</footer>
+<!-- FOOTER -->
+<footer>
+  © 2026 PUK PT SMT Indonesia - Bidang 3
+</footer>
 
 </body>
 </html>
