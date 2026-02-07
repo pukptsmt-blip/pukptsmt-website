@@ -1,4 +1,4 @@
-/* ===== RESET & GLOBAL ===== */
+/* ================= RESET & GLOBAL ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,10 +12,11 @@ body {
   line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
   background: linear-gradient(90deg, #002b5c, #0054a6);
   padding: 12px 20px;
@@ -23,11 +24,17 @@ body {
   flex-wrap: wrap;
 }
 
+/* LOGO FIX SIZE SEMUA HALAMAN */
 .logo {
   width: 90px;
-  height: auto;
+  height: 90px;
+  object-fit: contain;
+  background: white;
+  padding: 6px;
+  border-radius: 10px;
 }
 
+/* TITLE TENGAH */
 .title {
   flex: 1;
   text-align: center;
@@ -43,7 +50,7 @@ body {
   opacity: 0.85;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 nav {
   background: #111;
   padding: 10px;
@@ -67,14 +74,14 @@ nav a.active {
   color: #ffd700;
 }
 
-/* ===== CONTENT ===== */
+/* ================= CONTENT ================= */
 section {
   max-width: 900px;
   margin: 20px auto;
   padding: 15px;
 }
 
-/* ===== CARD ===== */
+/* ================= CARD BOX ================= */
 .card {
   background: #fff;
   padding: 18px;
@@ -86,10 +93,10 @@ section {
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* ===== FORM ===== */
+/* ================= FORM ================= */
 input,
 textarea {
   width: 100%;
@@ -108,7 +115,7 @@ textarea:focus {
   box-shadow: 0 0 0 2px rgba(0,84,166,0.1);
 }
 
-/* ===== BUTTON ===== */
+/* ================= BUTTON ================= */
 button {
   padding: 10px 18px;
   background: #0054a6;
@@ -125,7 +132,7 @@ button:hover {
   transform: scale(1.02);
 }
 
-/* ===== KEGIATAN BOX ===== */
+/* ================= KEGIATAN BOX ================= */
 .kegiatan-item {
   background: #f9f9f9;
   padding: 10px 12px;
@@ -135,7 +142,35 @@ button:hover {
   font-size: 14px;
 }
 
-/* ===== FOOTER ===== */
+/* ================= TABLE PENGURUS ================= */
+.pengurus-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.pengurus-table th,
+.pengurus-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.pengurus-table th {
+  background: #0054a6;
+  color: white;
+}
+
+/* ================= FOTO DI SECTION (BUKAN LOGO) ================= */
+section img:not(.logo) {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* ================= FOOTER ================= */
 footer {
   background: #002b5c;
   color: white;
@@ -145,7 +180,7 @@ footer {
   margin-top: 40px;
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
+/* ================= RESPONSIVE MOBILE ================= */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -154,6 +189,7 @@ footer {
 
   .logo {
     width: 70px;
+    height: 70px;
   }
 
   .title h1 {
